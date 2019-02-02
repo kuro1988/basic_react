@@ -58,7 +58,10 @@ export default class IndecisionApp extends React.Component {
 
     this.setState((prevState) => ({
       options: prevState.options.concat(option)
-    }));
+    }), function () {
+      console.log(this.state.options)
+    }
+    )
   }
 
   handleClearSelectedOption = () => {
